@@ -17,7 +17,7 @@
             "ioValues": [
                 {
                     "name": "number or geometry",
-                    "ioValue": ""
+                    "ioValue": 1745010219608
                 }
             ],
             "description": "Connect geometry here to make it available in the next level up. "
@@ -63,7 +63,7 @@
             "ioValues": [
                 {
                     "name": "x length",
-                    "ioValue": 9
+                    "ioValue": 0.75
                 },
                 {
                     "name": "y length",
@@ -85,7 +85,7 @@
                 },
                 {
                     "name": "xDist",
-                    "ioValue": 0
+                    "ioValue": 10
                 },
                 {
                     "name": "yDist",
@@ -163,6 +163,62 @@
                 }
             ],
             "description": "Extrudes a 2D shape. Input can be negitive. "
+        },
+        {
+            "atomType": "CutLayout",
+            "name": "Cut Layout",
+            "x": 0.8046875000000001,
+            "y": 0.2916666666666667,
+            "uniqueID": 1745010288386,
+            "ioValues": [
+                {
+                    "name": "geometry",
+                    "ioValue": 1745010219608
+                },
+                {
+                    "name": "Material Thickness",
+                    "ioValue": 0.75
+                },
+                {
+                    "name": "Sheet Width",
+                    "ioValue": 96
+                },
+                {
+                    "name": "Sheet Height",
+                    "ioValue": 48
+                },
+                {
+                    "name": "Part Padding",
+                    "ioValue": 0.25
+                }
+            ],
+            "description": "Extracts all parts tagged for cutting and lays them out on a sheet to cut.",
+            "placements": [
+                {
+                    "translate": {
+                        "x": 25.224998474121094,
+                        "y": -34.275001525878906
+                    },
+                    "id": 5,
+                    "rotate": 90
+                },
+                {
+                    "translate": {
+                        "x": -4.78064111998291,
+                        "y": 15.549635892175292
+                    },
+                    "id": 4,
+                    "rotate": 0
+                },
+                {
+                    "translate": {
+                        "x": 15.528396009997557,
+                        "y": 15.005122670037842
+                    },
+                    "id": 3,
+                    "rotate": 90
+                }
+            ]
         }
     ],
     "allConnectors": [
@@ -214,6 +270,13 @@
             "ap2Primary": false,
             "ap1ID": 1745010219608,
             "ap2ID": 1745009196702
+        },
+        {
+            "ap1Name": "geometry",
+            "ap2Name": "geometry",
+            "ap2Primary": false,
+            "ap1ID": 1745010219608,
+            "ap2ID": 1745010288386
         }
     ],
     "unitsKey": "Inches",
