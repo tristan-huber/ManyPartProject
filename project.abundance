@@ -14,7 +14,12 @@
             "x": 0.98,
             "y": 0.5,
             "uniqueID": 1745009196702,
-            "ioValues": [],
+            "ioValues": [
+                {
+                    "name": "number or geometry",
+                    "ioValue": ""
+                }
+            ],
             "description": "Connect geometry here to make it available in the next level up. "
         },
         {
@@ -118,6 +123,46 @@
                 }
             ],
             "description": "Moves a shape laterally in X, Y, Z."
+        },
+        {
+            "atomType": "Assembly",
+            "name": "Assembly",
+            "x": 0.57421875,
+            "y": 0.4404761904761905,
+            "uniqueID": 1745010206178,
+            "ioValues": [
+                {
+                    "name": "Shape 1",
+                    "ioValue": 1745009373446
+                },
+                {
+                    "name": "Shape 2",
+                    "ioValue": 1745009476683
+                },
+                {
+                    "name": "Shape 3",
+                    "ioValue": 1745009488633
+                }
+            ],
+            "description": "Pick between assembly and fusion to join input geometries. Assembly takes multiple shapes together into one, shapes higher in the inputs list will cut into shapes lower on the input list where they overlap. Fusion takes all shapes or sketches and fuses them permanently into a single shape"
+        },
+        {
+            "atomType": "Extrude",
+            "name": "Extrude",
+            "x": 0.6608072916666666,
+            "y": 0.7916666666666667,
+            "uniqueID": 1745010219608,
+            "ioValues": [
+                {
+                    "name": "geometry",
+                    "ioValue": 1745010206178
+                },
+                {
+                    "name": "height",
+                    "ioValue": 10
+                }
+            ],
+            "description": "Extrudes a 2D shape. Input can be negitive. "
         }
     ],
     "allConnectors": [
@@ -130,10 +175,45 @@
         },
         {
             "ap1Name": "geometry",
+            "ap2Name": "Shape 1",
+            "ap2Primary": false,
+            "ap1ID": 1745009373446,
+            "ap2ID": 1745010206178
+        },
+        {
+            "ap1Name": "geometry",
             "ap2Name": "geometry",
             "ap2Primary": true,
             "ap1ID": 1745009392059,
             "ap2ID": 1745009488633
+        },
+        {
+            "ap1Name": "geometry",
+            "ap2Name": "Shape 2",
+            "ap2Primary": false,
+            "ap1ID": 1745009476683,
+            "ap2ID": 1745010206178
+        },
+        {
+            "ap1Name": "geometry",
+            "ap2Name": "Shape 3",
+            "ap2Primary": false,
+            "ap1ID": 1745009488633,
+            "ap2ID": 1745010206178
+        },
+        {
+            "ap1Name": "geometry",
+            "ap2Name": "geometry",
+            "ap2Primary": true,
+            "ap1ID": 1745010206178,
+            "ap2ID": 1745010219608
+        },
+        {
+            "ap1Name": "geometry",
+            "ap2Name": "number or geometry",
+            "ap2Primary": false,
+            "ap1ID": 1745010219608,
+            "ap2ID": 1745009196702
         }
     ],
     "unitsKey": "Inches",
