@@ -17,7 +17,7 @@
             "ioValues": [
                 {
                     "name": "number or geometry",
-                    "ioValue": 1745010288386
+                    "ioValue": 1745011927660
                 }
             ],
             "description": "Connect geometry here to make it available in the next level up. "
@@ -354,13 +354,6 @@
         },
         {
             "ap1Name": "geometry",
-            "ap2Name": "number or geometry",
-            "ap2Primary": false,
-            "ap1ID": 1745010288386,
-            "ap2ID": 1745009196702
-        },
-        {
-            "ap1Name": "geometry",
             "ap2Name": "Shape 2",
             "ap2Primary": false,
             "ap1ID": 1745011902475,
@@ -372,6 +365,13 @@
             "ap2Primary": false,
             "ap1ID": 1745011927660,
             "ap2ID": 1745010288386
+        },
+        {
+            "ap1Name": "geometry",
+            "ap2Name": "number or geometry",
+            "ap2Primary": false,
+            "ap1ID": 1745011927660,
+            "ap2ID": 1745009196702
         },
         {
             "ap1Name": "geometry",
