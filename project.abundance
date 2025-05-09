@@ -93,7 +93,7 @@
                 },
                 {
                     "name": "zDist",
-                    "ioValue": 0
+                    "ioValue": 10
                 }
             ],
             "description": "Moves a shape laterally in X, Y, Z."
@@ -132,16 +132,16 @@
             "uniqueID": 1745010206178,
             "ioValues": [
                 {
-                    "name": "Shape 2",
-                    "ioValue": 1745009476683
-                },
-                {
                     "name": "Shape 3",
                     "ioValue": 1745009488633
                 },
                 {
                     "name": "Shape 4",
                     "ioValue": 1745011950084
+                },
+                {
+                    "name": "Shape 5",
+                    "ioValue": 1746832160568
                 }
             ],
             "description": "Pick between assembly and fusion to join input geometries. Assembly takes multiple shapes together into one, shapes higher in the inputs list will cut into shapes lower on the input list where they overlap. Fusion takes all shapes or sketches and fuses them permanently into a single shape"
@@ -167,8 +167,8 @@
         {
             "atomType": "CutLayout",
             "name": "Cut Layout",
-            "x": 0.7877604166666666,
-            "y": 0.5476190476190477,
+            "x": 0.787109375,
+            "y": 0.5457142857142857,
             "uniqueID": 1745010288386,
             "ioValues": [
                 {
@@ -192,43 +192,35 @@
             "placements": [
                 [
                     {
-                        "id": 1,
-                        "rotate": 90,
+                        "id": 2,
+                        "rotate": 300,
                         "translate": {
-                            "x": 2.6623197999999997,
-                            "y": -7.2692137
-                        }
-                    },
-                    {
-                        "id": 3,
-                        "rotate": 90,
-                        "translate": {
-                            "x": -4.558493600000006,
-                            "y": -34.050772451533945
+                            "x": -0.133716885818707,
+                            "y": 46.62549327604606
                         }
                     },
                     {
                         "id": 0,
-                        "rotate": 270,
+                        "rotate": 180,
                         "translate": {
-                            "x": 5.225000031703001,
-                            "y": 11.29842105062519
+                            "x": 4.55512705062519,
+                            "y": 9.009390268297
                         }
                     },
                     {
-                        "id": 4,
-                        "rotate": 270,
-                        "translate": {
-                            "x": 15.650155631703008,
-                            "y": 51.22204565062519
-                        }
-                    },
-                    {
-                        "id": 2,
+                        "id": 3,
                         "rotate": 330,
                         "translate": {
-                            "x": -20.391567829044718,
-                            "y": 18.04391139952585
+                            "x": -21.664320380601048,
+                            "y": 37.55826725175582
+                        }
+                    },
+                    {
+                        "id": 1,
+                        "rotate": 30,
+                        "translate": {
+                            "x": -7.795151089310359,
+                            "y": -19.02573873458008
                         }
                     }
                 ]
@@ -295,6 +287,32 @@
                 }
             ],
             "description": "Moves a shape laterally in X, Y, Z."
+        },
+        {
+            "atomType": "Rotate",
+            "name": "Rotate",
+            "x": 0.56640625,
+            "y": 0.20857142857142857,
+            "uniqueID": 1746832160568,
+            "ioValues": [
+                {
+                    "name": "geometry",
+                    "ioValue": 1745009476683
+                },
+                {
+                    "name": "x-axis degrees",
+                    "ioValue": 0
+                },
+                {
+                    "name": "y-axis degrees",
+                    "ioValue": -120
+                },
+                {
+                    "name": "z-axis degrees",
+                    "ioValue": 4
+                }
+            ],
+            "description": "Rotates the input geometry around the X, Y, or Z axis. Inputs are degrees."
         }
     ],
     "allConnectors": [
@@ -328,10 +346,10 @@
         },
         {
             "ap1Name": "geometry",
-            "ap2Name": "Shape 2",
-            "ap2Primary": false,
+            "ap2Name": "geometry",
+            "ap2Primary": true,
             "ap1ID": 1745009476683,
-            "ap2ID": 1745010206178
+            "ap2ID": 1746832160568
         },
         {
             "ap1Name": "geometry",
@@ -380,6 +398,13 @@
             "ap2Name": "Shape 4",
             "ap2Primary": false,
             "ap1ID": 1745011950084,
+            "ap2ID": 1745010206178
+        },
+        {
+            "ap1Name": "geometry",
+            "ap2Name": "Shape 5",
+            "ap2Primary": false,
+            "ap1ID": 1746832160568,
             "ap2ID": 1745010206178
         }
     ],
