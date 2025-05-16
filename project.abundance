@@ -140,8 +140,8 @@
                     "ioValue": 1745011950084
                 },
                 {
-                    "name": "Shape 5",
-                    "ioValue": 1746832160568
+                    "name": "Shape 6",
+                    "ioValue": 1745009476683
                 }
             ],
             "description": "Pick between assembly and fusion to join input geometries. Assembly takes multiple shapes together into one, shapes higher in the inputs list will cut into shapes lower on the input list where they overlap. Fusion takes all shapes or sketches and fuses them permanently into a single shape"
@@ -192,35 +192,43 @@
             "placements": [
                 [
                     {
-                        "id": 2,
-                        "rotate": 300,
-                        "translate": {
-                            "x": -0.133716885818707,
-                            "y": 46.62549327604606
-                        }
-                    },
-                    {
                         "id": 0,
-                        "rotate": 180,
-                        "translate": {
-                            "x": 4.55512705062519,
-                            "y": 9.009390268297
-                        }
-                    },
-                    {
-                        "id": 3,
                         "rotate": 330,
                         "translate": {
-                            "x": -21.664320380601048,
-                            "y": 37.55826725175582
+                            "x": 5.2162131735731485,
+                            "y": 4.67179106432306
                         }
                     },
                     {
                         "id": 1,
-                        "rotate": 30,
+                        "rotate": 270,
                         "translate": {
-                            "x": -7.795151089310359,
-                            "y": -19.02573873458008
+                            "x": -4.558493649053885,
+                            "y": 49.83279555153395
+                        }
+                    },
+                    {
+                        "id": 3,
+                        "rotate": 210,
+                        "translate": {
+                            "x": 50.09172335976649,
+                            "y": 24.71526427312227
+                        }
+                    },
+                    {
+                        "id": 4,
+                        "rotate": 0,
+                        "translate": {
+                            "x": -7.269213699999999,
+                            "y": 13.3305623
+                        }
+                    },
+                    {
+                        "id": 2,
+                        "rotate": 210,
+                        "translate": {
+                            "x": 61.87803005934334,
+                            "y": 16.36308497799447
                         }
                     }
                 ]
@@ -265,8 +273,8 @@
         {
             "atomType": "Move",
             "name": "Move",
-            "x": 0.43164062499999994,
-            "y": 0.5208333333333334,
+            "x": 0.4192708333333333,
+            "y": 0.41964285714285715,
             "uniqueID": 1745011950084,
             "ioValues": [
                 {
@@ -353,6 +361,13 @@
         },
         {
             "ap1Name": "geometry",
+            "ap2Name": "Shape 6",
+            "ap2Primary": false,
+            "ap1ID": 1745009476683,
+            "ap2ID": 1745010206178
+        },
+        {
+            "ap1Name": "geometry",
             "ap2Name": "Shape 3",
             "ap2Primary": false,
             "ap1ID": 1745009488633,
@@ -398,13 +413,6 @@
             "ap2Name": "Shape 4",
             "ap2Primary": false,
             "ap1ID": 1745011950084,
-            "ap2ID": 1745010206178
-        },
-        {
-            "ap1Name": "geometry",
-            "ap2Name": "Shape 5",
-            "ap2Primary": false,
-            "ap1ID": 1746832160568,
             "ap2ID": 1745010206178
         }
     ],
