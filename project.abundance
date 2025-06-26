@@ -278,6 +278,10 @@
                 {
                     "name": "Shape 5",
                     "ioValue": 1747440642245
+                },
+                {
+                    "name": "Shape 6",
+                    "ioValue": "b544f942-52d2-474d-b429-38d7dc565e00"
                 }
             ],
             "description": "Pick between assembly and fusion to join input geometries. Assembly takes multiple shapes together into one, shapes higher in the inputs list will cut into shapes lower on the input list where they overlap. Fusion takes all shapes or sketches and fuses them permanently into a single shape"
@@ -445,9 +449,9 @@
         {
             "atomType": "Rotate",
             "name": "Rotate",
-            "x": 0.27473958333333337,
-            "y": 0.8214285714285714,
-            "uniqueID": "429d7a12-ddaf-4b66-b707-9955c8e1a616",
+            "x": 0.2734375,
+            "y": 0.863095238095238,
+            "uniqueID": "e76a76e8-0049-4f4c-bbb1-d09d2a13711a",
             "ioValues": [
                 {
                     "name": "geometry",
@@ -471,12 +475,47 @@
         {
             "atomType": "Fusion",
             "name": "Fusion",
-            "x": 0.36067708333333337,
+            "x": 0.35807291666666663,
             "y": 0.8482142857142858,
-            "uniqueID": "30453d73-c8a0-408f-a603-af738dad199f",
-            "ioValues": [],
+            "uniqueID": "e183fec8-3e90-429c-96ce-e3f73e46148d",
+            "ioValues": [
+                {
+                    "name": "Shape 1",
+                    "ioValue": "e76a76e8-0049-4f4c-bbb1-d09d2a13711a"
+                },
+                {
+                    "name": "Shape 2",
+                    "ioValue": "cf40c31b-922e-4288-aab9-02ed9cb257f5"
+                }
+            ],
             "description": "Pick between assembly and fusion to join input geometries. Assembly takes multiple shapes together into one, shapes higher in the inputs list will cut into shapes lower on the input list where they overlap. Fusion takes all shapes or sketches and fuses them permanently into a single shape",
             "unionType": "Fusion"
+        },
+        {
+            "atomType": "Move",
+            "name": "Move",
+            "x": 0.4544270833333333,
+            "y": 0.8988095238095238,
+            "uniqueID": "b544f942-52d2-474d-b429-38d7dc565e00",
+            "ioValues": [
+                {
+                    "name": "geometry",
+                    "ioValue": "e183fec8-3e90-429c-96ce-e3f73e46148d"
+                },
+                {
+                    "name": "xDist",
+                    "ioValue": 0
+                },
+                {
+                    "name": "yDist",
+                    "ioValue": -20
+                },
+                {
+                    "name": "zDist",
+                    "ioValue": 0
+                }
+            ],
+            "description": "Moves a shape laterally in X, Y, Z."
         }
     ],
     "allConnectors": [
@@ -604,7 +643,7 @@
             "ap2Name": "geometry",
             "ap2Primary": true,
             "ap1ID": "ce912079-abc0-44ae-9b8e-3a77fa91baec",
-            "ap2ID": "429d7a12-ddaf-4b66-b707-9955c8e1a616"
+            "ap2ID": "e76a76e8-0049-4f4c-bbb1-d09d2a13711a"
         },
         {
             "ap1Name": "geometry",
@@ -612,6 +651,34 @@
             "ap2Primary": true,
             "ap1ID": "4b3f4017-8621-4b0c-a59b-4bf96a4ef141",
             "ap2ID": "cf40c31b-922e-4288-aab9-02ed9cb257f5"
+        },
+        {
+            "ap1Name": "geometry",
+            "ap2Name": "Shape 2",
+            "ap2Primary": false,
+            "ap1ID": "cf40c31b-922e-4288-aab9-02ed9cb257f5",
+            "ap2ID": "e183fec8-3e90-429c-96ce-e3f73e46148d"
+        },
+        {
+            "ap1Name": "geometry",
+            "ap2Name": "Shape 1",
+            "ap2Primary": false,
+            "ap1ID": "e76a76e8-0049-4f4c-bbb1-d09d2a13711a",
+            "ap2ID": "e183fec8-3e90-429c-96ce-e3f73e46148d"
+        },
+        {
+            "ap1Name": "geometry",
+            "ap2Name": "geometry",
+            "ap2Primary": true,
+            "ap1ID": "e183fec8-3e90-429c-96ce-e3f73e46148d",
+            "ap2ID": "b544f942-52d2-474d-b429-38d7dc565e00"
+        },
+        {
+            "ap1Name": "geometry",
+            "ap2Name": "Shape 6",
+            "ap2Primary": false,
+            "ap1ID": "b544f942-52d2-474d-b429-38d7dc565e00",
+            "ap2ID": 1745011927660
         }
     ],
     "unitsKey": "Inches",
