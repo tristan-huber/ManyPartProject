@@ -25,8 +25,8 @@
         {
             "atomType": "Circle",
             "name": "Circle",
-            "x": 0.20572916666666666,
-            "y": 0.21726190476190477,
+            "x": 0.18164062499999997,
+            "y": 0.23214285714285715,
             "uniqueID": 1745009357567,
             "ioValues": [
                 {
@@ -75,8 +75,8 @@
         {
             "atomType": "Move",
             "name": "Move",
-            "x": 0.37109375,
-            "y": 0.20833333333333334,
+            "x": 0.2727864583333333,
+            "y": 0.1994047619047619,
             "uniqueID": 1745009476683,
             "ioValues": [
                 {
@@ -136,10 +136,6 @@
                     "ioValue": 1745009488633
                 },
                 {
-                    "name": "Shape 4",
-                    "ioValue": 1745011950084
-                },
-                {
                     "name": "Shape 8",
                     "ioValue": 1745009476683
                 }
@@ -192,59 +188,35 @@
             "placements": [
                 [
                     {
-                        "id": 2,
+                        "id": 0,
                         "rotate": 180,
                         "translate": {
-                            "x": 1.2250000000000012,
-                            "y": 9.083253175473057
-                        }
-                    },
-                    {
-                        "id": 5,
-                        "rotate": 300,
-                        "translate": {
-                            "x": 4.041359634467349,
-                            "y": 2.723150444860566
-                        }
-                    },
-                    {
-                        "id": 4,
-                        "rotate": 120,
-                        "translate": {
-                            "x": 4.080669565532654,
-                            "y": 8.102008455139433
-                        }
-                    },
-                    {
-                        "id": 6,
-                        "rotate": 0,
-                        "translate": {
-                            "x": 4.54901433904665,
-                            "y": 25.556672387114553
-                        }
-                    },
-                    {
-                        "id": 0,
-                        "rotate": 300,
-                        "translate": {
-                            "x": 4.5551269268777315,
-                            "y": 25.402895830133918
+                            "x": 0.22500000000000278,
+                            "y": 22.725
                         }
                     },
                     {
                         "id": 3,
-                        "rotate": 120,
+                        "rotate": 240,
                         "translate": {
-                            "x": 4.5551269731222686,
-                            "y": 35.785123269866084
+                            "x": 5.8647281867023695,
+                            "y": 5.978347480019922
                         }
                     },
                     {
                         "id": 1,
-                        "rotate": 0,
+                        "rotate": 210,
                         "translate": {
-                            "x": 7.950681548466053,
-                            "y": 9.083253175473054
+                            "x": 3.0358925835521546,
+                            "y": 7.792115733808328
+                        }
+                    },
+                    {
+                        "id": 2,
+                        "rotate": 30,
+                        "translate": {
+                            "x": 1.4995698763730045,
+                            "y": 15.39405622990056
                         }
                     }
                 ]
@@ -276,20 +248,12 @@
             "uniqueID": 1745011927660,
             "ioValues": [
                 {
-                    "name": "Shape 2",
-                    "ioValue": 1745011902475
-                },
-                {
                     "name": "Shape 3",
                     "ioValue": 1745010219608
                 },
                 {
                     "name": "Shape 5",
                     "ioValue": 1747440642245
-                },
-                {
-                    "name": "Shape 6",
-                    "ioValue": "b544f942-52d2-474d-b429-38d7dc565e00"
                 }
             ],
             "description": "Pick between assembly and fusion to join input geometries. Assembly takes multiple shapes together into one, shapes higher in the inputs list will cut into shapes lower on the input list where they overlap. Fusion takes all shapes or sketches and fuses them permanently into a single shape"
@@ -323,8 +287,8 @@
         {
             "atomType": "Rotate",
             "name": "Rotate",
-            "x": 0.56640625,
-            "y": 0.20857142857142857,
+            "x": 0.5559895833333334,
+            "y": 0.28869047619047616,
             "uniqueID": 1746832160568,
             "ioValues": [
                 {
@@ -349,8 +313,8 @@
         {
             "atomType": "Move",
             "name": "Move",
-            "x": 0.5078125,
-            "y": 0.09523809523809523,
+            "x": 0.45247395833333337,
+            "y": 0.10416666666666667,
             "uniqueID": 1747436084257,
             "ioValues": [
                 {
@@ -381,7 +345,7 @@
             "ioValues": [
                 {
                     "name": "geometry",
-                    "ioValue": 1747436084257
+                    "ioValue": 1746832160568
                 },
                 {
                     "name": "height",
@@ -599,13 +563,6 @@
         },
         {
             "ap1Name": "geometry",
-            "ap2Name": "Shape 2",
-            "ap2Primary": false,
-            "ap1ID": 1745011902475,
-            "ap2ID": 1745011927660
-        },
-        {
-            "ap1Name": "geometry",
             "ap2Name": "geometry",
             "ap2Primary": false,
             "ap1ID": 1745011927660,
@@ -620,16 +577,9 @@
         },
         {
             "ap1Name": "geometry",
-            "ap2Name": "Shape 4",
-            "ap2Primary": false,
-            "ap1ID": 1745011950084,
-            "ap2ID": 1745010206178
-        },
-        {
-            "ap1Name": "geometry",
             "ap2Name": "geometry",
             "ap2Primary": true,
-            "ap1ID": 1747436084257,
+            "ap1ID": 1746832160568,
             "ap2ID": 1747440642245
         },
         {
@@ -680,13 +630,6 @@
             "ap2Primary": true,
             "ap1ID": "e183fec8-3e90-429c-96ce-e3f73e46148d",
             "ap2ID": "b544f942-52d2-474d-b429-38d7dc565e00"
-        },
-        {
-            "ap1Name": "geometry",
-            "ap2Name": "Shape 6",
-            "ap2Primary": false,
-            "ap1ID": "b544f942-52d2-474d-b429-38d7dc565e00",
-            "ap2ID": 1745011927660
         }
     ],
     "unitsKey": "Inches",
