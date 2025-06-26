@@ -123,42 +123,42 @@
                 [
                     {
                         "id": 3,
-                        "rotate": 0,
+                        "rotate": 210,
                         "translate": {
-                            "x": 4.187249301194444,
-                            "y": 5.2252211
+                            "x": 2.803451027781218,
+                            "y": 3.8277901938061776
                         }
                     },
                     {
                         "id": 4,
                         "rotate": 30,
                         "translate": {
-                            "x": 6.781828255012787,
-                            "y": 8.4283344578168
-                        }
-                    },
-                    {
-                        "id": 0,
-                        "rotate": 30,
-                        "translate": {
-                            "x": 9.766844063259585,
-                            "y": 10.151734169175356
+                            "x": 4.4640696120731125,
+                            "y": 9.061187647958416
                         }
                     },
                     {
                         "id": 1,
-                        "rotate": 180,
+                        "rotate": 270,
                         "translate": {
-                            "x": 8.070092833718753,
-                            "y": 18.403091965070715
+                            "x": 4.824929,
+                            "y": 14.9424929
+                        }
+                    },
+                    {
+                        "id": 0,
+                        "rotate": 330,
+                        "translate": {
+                            "x": 6.603190050522045,
+                            "y": 19.905820423791347
                         }
                     },
                     {
                         "id": 2,
-                        "rotate": 120,
+                        "rotate": 210,
                         "translate": {
-                            "x": 3.7451734245895443,
-                            "y": 24.772206749493844
+                            "x": 2.803451024172223,
+                            "y": 28.252491406193826
                         }
                     }
                 ]
@@ -173,7 +173,7 @@
             "ioValues": [
                 {
                     "name": "geometry",
-                    "ioValue": "1450c7e0-1a32-4ddb-ab39-2c76325e3f03"
+                    "ioValue": "af8e91be-213d-4f3c-a329-7177e9f65503"
                 },
                 {
                     "name": "height",
@@ -327,8 +327,8 @@
         {
             "atomType": "Difference",
             "name": "Difference",
-            "x": 0.3411458333333333,
-            "y": 0.880952380952381,
+            "x": 0.2799479166666667,
+            "y": 0.8125,
             "uniqueID": "1450c7e0-1a32-4ddb-ab39-2c76325e3f03",
             "ioValues": [
                 {
@@ -506,6 +506,94 @@
             "unitsKey": "MM",
             "fileTypeVersion": 1,
             "compiledBom": []
+        },
+        {
+            "atomType": "RegularPolygon",
+            "name": "RegularPolygon",
+            "x": 0.30859375,
+            "y": 0.4613095238095238,
+            "uniqueID": "80027ec8-7f54-4700-9f01-0a316ab4d892",
+            "ioValues": [
+                {
+                    "name": "number of sides",
+                    "ioValue": 3
+                },
+                {
+                    "name": "diameter",
+                    "ioValue": 20
+                }
+            ],
+            "description": "Creates a new regular polygon. Corners are on the diameter."
+        },
+        {
+            "atomType": "Rotate",
+            "name": "Rotate",
+            "x": 0.37890625,
+            "y": 0.5595238095238095,
+            "uniqueID": "29321a7c-9bf0-47db-ba3a-fa08568ac3a0",
+            "ioValues": [
+                {
+                    "name": "geometry",
+                    "ioValue": "80027ec8-7f54-4700-9f01-0a316ab4d892"
+                },
+                {
+                    "name": "x-axis degrees",
+                    "ioValue": 0
+                },
+                {
+                    "name": "y-axis degrees",
+                    "ioValue": 0
+                },
+                {
+                    "name": "z-axis degrees",
+                    "ioValue": 210
+                }
+            ],
+            "description": "Rotates the input geometry around the X, Y, or Z axis. Inputs are degrees."
+        },
+        {
+            "atomType": "Intersection",
+            "name": "Intersection",
+            "x": 0.4602864583333333,
+            "y": 0.7172619047619048,
+            "uniqueID": "af8e91be-213d-4f3c-a329-7177e9f65503",
+            "ioValues": [
+                {
+                    "name": "geometry1",
+                    "ioValue": "26722282-bb3b-48f8-8673-8b188e2b426b"
+                },
+                {
+                    "name": "geometry2",
+                    "ioValue": "1450c7e0-1a32-4ddb-ab39-2c76325e3f03"
+                }
+            ],
+            "description": "The space shared by two shapes."
+        },
+        {
+            "atomType": "Move",
+            "name": "Move",
+            "x": 0.4420572916666667,
+            "y": 0.4404761904761905,
+            "uniqueID": "26722282-bb3b-48f8-8673-8b188e2b426b",
+            "ioValues": [
+                {
+                    "name": "geometry",
+                    "ioValue": "29321a7c-9bf0-47db-ba3a-fa08568ac3a0"
+                },
+                {
+                    "name": "xDist",
+                    "ioValue": 6
+                },
+                {
+                    "name": "yDist",
+                    "ioValue": 0
+                },
+                {
+                    "name": "zDist",
+                    "ioValue": 0
+                }
+            ],
+            "description": "Moves a shape laterally in X, Y, Z."
         }
     ],
     "allConnectors": [
@@ -602,10 +690,10 @@
         },
         {
             "ap1Name": "geometry",
-            "ap2Name": "geometry",
-            "ap2Primary": true,
+            "ap2Name": "geometry2",
+            "ap2Primary": false,
             "ap1ID": "1450c7e0-1a32-4ddb-ab39-2c76325e3f03",
-            "ap2ID": 1745011902475
+            "ap2ID": "af8e91be-213d-4f3c-a329-7177e9f65503"
         },
         {
             "ap1Name": "Geometry",
@@ -613,6 +701,34 @@
             "ap2Primary": false,
             "ap1ID": "00d4c62c-2dcd-489c-9178-832fe8bbdf90",
             "ap2ID": 1745010288386
+        },
+        {
+            "ap1Name": "geometry",
+            "ap2Name": "geometry",
+            "ap2Primary": true,
+            "ap1ID": "80027ec8-7f54-4700-9f01-0a316ab4d892",
+            "ap2ID": "29321a7c-9bf0-47db-ba3a-fa08568ac3a0"
+        },
+        {
+            "ap1Name": "geometry",
+            "ap2Name": "geometry",
+            "ap2Primary": true,
+            "ap1ID": "29321a7c-9bf0-47db-ba3a-fa08568ac3a0",
+            "ap2ID": "26722282-bb3b-48f8-8673-8b188e2b426b"
+        },
+        {
+            "ap1Name": "geometry",
+            "ap2Name": "geometry",
+            "ap2Primary": true,
+            "ap1ID": "af8e91be-213d-4f3c-a329-7177e9f65503",
+            "ap2ID": 1745011902475
+        },
+        {
+            "ap1Name": "geometry",
+            "ap2Name": "geometry1",
+            "ap2Primary": false,
+            "ap1ID": "26722282-bb3b-48f8-8673-8b188e2b426b",
+            "ap2ID": "af8e91be-213d-4f3c-a329-7177e9f65503"
         }
     ],
     "unitsKey": "Inches",
