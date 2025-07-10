@@ -263,7 +263,7 @@
             "ioValues": [
                 {
                     "name": "Number",
-                    "ioValue": 5
+                    "ioValue": 4
                 },
                 {
                     "name": "Dist",
@@ -304,7 +304,7 @@
                         },
                         {
                             "name": "Number",
-                            "ioValue": 5
+                            "ioValue": 4
                         },
                         {
                             "name": "Dist",
@@ -587,6 +587,68 @@
             ],
             "description": "Pick between assembly and fusion to join input geometries. Assembly takes multiple shapes together into one, shapes higher in the inputs list will cut into shapes lower on the input list where they overlap. Fusion takes all shapes or sketches and fuses them permanently into a single shape",
             "unionType": "Fusion"
+        },
+        {
+            "atomType": "CutLayout",
+            "name": "Cut Layout",
+            "x": 0.8912760416666667,
+            "y": 0.744047619047619,
+            "uniqueID": "1e9ae5c3-2d0b-4c0b-889e-72ec41d60f3c",
+            "ioValues": [
+                {
+                    "name": "geometry",
+                    "ioValue": "00d4c62c-2dcd-489c-9178-832fe8bbdf90"
+                },
+                {
+                    "name": "Sheet Width",
+                    "ioValue": 48
+                },
+                {
+                    "name": "Sheet Height",
+                    "ioValue": 96
+                },
+                {
+                    "name": "Part Padding",
+                    "ioValue": 0.25
+                }
+            ],
+            "description": "Extracts all parts tagged for cutting and lays them out on a sheet to cut.",
+            "placements": [
+                [
+                    {
+                        "id": 1,
+                        "rotate": 330,
+                        "translate": {
+                            "x": 4.59241806251953,
+                            "y": 3.814982948981929
+                        }
+                    },
+                    {
+                        "id": 3,
+                        "rotate": 330,
+                        "translate": {
+                            "x": 4.592418043585682,
+                            "y": 12.080490648981929
+                        }
+                    },
+                    {
+                        "id": 2,
+                        "rotate": 330,
+                        "translate": {
+                            "x": 4.592418043585682,
+                            "y": 20.34599834898193
+                        }
+                    },
+                    {
+                        "id": 0,
+                        "rotate": 210,
+                        "translate": {
+                            "x": 2.8987945842241287,
+                            "y": 28.972474467709944
+                        }
+                    }
+                ]
+            ]
         }
     ],
     "allConnectors": [
@@ -673,6 +735,13 @@
             "ap2Primary": false,
             "ap1ID": "1450c7e0-1a32-4ddb-ab39-2c76325e3f03",
             "ap2ID": "af8e91be-213d-4f3c-a329-7177e9f65503"
+        },
+        {
+            "ap1Name": "Geometry",
+            "ap2Name": "geometry",
+            "ap2Primary": false,
+            "ap1ID": "00d4c62c-2dcd-489c-9178-832fe8bbdf90",
+            "ap2ID": "1e9ae5c3-2d0b-4c0b-889e-72ec41d60f3c"
         },
         {
             "ap1Name": "geometry",
