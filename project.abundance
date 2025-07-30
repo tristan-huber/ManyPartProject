@@ -601,7 +601,7 @@
             "ioValues": [
                 {
                     "name": "geometry",
-                    "ioValue": 1745010206178
+                    "ioValue": "00d4c62c-2dcd-489c-9178-832fe8bbdf90"
                 },
                 {
                     "name": "Sheet Width",
@@ -617,7 +617,42 @@
                 }
             ],
             "description": "Extracts all parts tagged for cutting and lays them out on a sheet to cut.",
-            "placements": []
+            "placements": [
+                [
+                    {
+                        "id": 1,
+                        "rotate": 240,
+                        "translate": {
+                            "x": 4.061722782290059,
+                            "y": 3.1519103325481534
+                        }
+                    },
+                    {
+                        "id": 0,
+                        "rotate": 210,
+                        "translate": {
+                            "x": 5.246587152851808,
+                            "y": 7.717067704352354
+                        }
+                    },
+                    {
+                        "id": 3,
+                        "rotate": 180,
+                        "translate": {
+                            "x": 8.555288472265826,
+                            "y": 11.078177929893524
+                        }
+                    },
+                    {
+                        "id": 2,
+                        "rotate": 330,
+                        "translate": {
+                            "x": 4.267723064081103,
+                            "y": 16.210268482290058
+                        }
+                    }
+                ]
+            ]
         }
     ],
     "allConnectors": [
@@ -641,13 +676,6 @@
             "ap2Primary": true,
             "ap1ID": 1745009476683,
             "ap2ID": 1746832160568
-        },
-        {
-            "ap1Name": "geometry",
-            "ap2Name": "geometry",
-            "ap2Primary": false,
-            "ap1ID": 1745010206178,
-            "ap2ID": "6afe7e38-7868-4c05-b777-62321a340dc3"
         },
         {
             "ap1Name": "geometry",
@@ -718,6 +746,13 @@
             "ap2Primary": false,
             "ap1ID": "00d4c62c-2dcd-489c-9178-832fe8bbdf90",
             "ap2ID": 1745010206178
+        },
+        {
+            "ap1Name": "Geometry",
+            "ap2Name": "geometry",
+            "ap2Primary": false,
+            "ap1ID": "00d4c62c-2dcd-489c-9178-832fe8bbdf90",
+            "ap2ID": "6afe7e38-7868-4c05-b777-62321a340dc3"
         },
         {
             "ap1Name": "geometry",
