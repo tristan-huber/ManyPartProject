@@ -595,13 +595,13 @@
         {
             "atomType": "CutLayout",
             "name": "Cut Layout",
-            "x": 0.8893229166666666,
-            "y": 0.7738095238095237,
-            "uniqueID": "78ae8138-b095-4382-98ef-f7595c6f04b2",
+            "x": 0.9206521739130434,
+            "y": 0.6517857142857143,
+            "uniqueID": "6afe7e38-7868-4c05-b777-62321a340dc3",
             "ioValues": [
                 {
                     "name": "geometry",
-                    "ioValue": "00d4c62c-2dcd-489c-9178-832fe8bbdf90"
+                    "ioValue": 1745010206178
                 },
                 {
                     "name": "Sheet Width",
@@ -617,42 +617,7 @@
                 }
             ],
             "description": "Extracts all parts tagged for cutting and lays them out on a sheet to cut.",
-            "placements": [
-                [
-                    {
-                        "id": 1,
-                        "rotate": 60,
-                        "translate": {
-                            "x": 4.5749999431661506,
-                            "y": 4.267723082301706
-                        }
-                    },
-                    {
-                        "id": 2,
-                        "rotate": 270,
-                        "translate": {
-                            "x": 4.924019,
-                            "y": 10.1213039
-                        }
-                    },
-                    {
-                        "id": 3,
-                        "rotate": 150,
-                        "translate": {
-                            "x": 5.57838761405794,
-                            "y": 15.748382088698964
-                        }
-                    },
-                    {
-                        "id": 0,
-                        "rotate": 150,
-                        "translate": {
-                            "x": 3.151910335918897,
-                            "y": 22.607180817709942
-                        }
-                    }
-                ]
-            ]
+            "placements": []
         }
     ],
     "allConnectors": [
@@ -676,6 +641,13 @@
             "ap2Primary": true,
             "ap1ID": 1745009476683,
             "ap2ID": 1746832160568
+        },
+        {
+            "ap1Name": "geometry",
+            "ap2Name": "geometry",
+            "ap2Primary": false,
+            "ap1ID": 1745010206178,
+            "ap2ID": "6afe7e38-7868-4c05-b777-62321a340dc3"
         },
         {
             "ap1Name": "geometry",
@@ -746,13 +718,6 @@
             "ap2Primary": false,
             "ap1ID": "00d4c62c-2dcd-489c-9178-832fe8bbdf90",
             "ap2ID": 1745010206178
-        },
-        {
-            "ap1Name": "Geometry",
-            "ap2Name": "geometry",
-            "ap2Primary": false,
-            "ap1ID": "00d4c62c-2dcd-489c-9178-832fe8bbdf90",
-            "ap2ID": "78ae8138-b095-4382-98ef-f7595c6f04b2"
         },
         {
             "ap1Name": "geometry",
