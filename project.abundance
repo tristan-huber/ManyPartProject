@@ -514,8 +514,8 @@
         {
             "atomType": "Rotate",
             "name": "Rotate",
-            "x": 0.4157608695652174,
-            "y": 0.14285714285714285,
+            "x": 0.33366533864541836,
+            "y": 0.23428571428571426,
             "uniqueID": "006c5c7d-b872-4644-8bea-bc138ca47e24",
             "ioValues": [
                 {
@@ -798,17 +798,17 @@
         },
         {
             "ap1Name": "geometry",
-            "ap2Name": "geometry",
-            "ap2Primary": true,
-            "ap1ID": "006c5c7d-b872-4644-8bea-bc138ca47e24",
-            "ap2ID": "751bdd64-c30a-4df2-b253-7f0a0ce2a31c"
-        },
-        {
-            "ap1Name": "geometry",
             "ap2Name": "Shape 2",
             "ap2Primary": false,
             "ap1ID": "006c5c7d-b872-4644-8bea-bc138ca47e24",
             "ap2ID": "515fe3a1-894e-4f05-8797-8e6527490978"
+        },
+        {
+            "ap1Name": "geometry",
+            "ap2Name": "geometry",
+            "ap2Primary": true,
+            "ap1ID": "006c5c7d-b872-4644-8bea-bc138ca47e24",
+            "ap2ID": "751bdd64-c30a-4df2-b253-7f0a0ce2a31c"
         },
         {
             "ap1Name": "geometry",
