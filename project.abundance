@@ -4,7 +4,12 @@
     "x": 0,
     "y": 0,
     "uniqueID": 1745009187328,
-    "ioValues": [],
+    "ioValues": [
+        {
+            "name": "height",
+            "ioValue": 10
+        }
+    ],
     "description": "Molecules provide an organizational structure to contain atoms. Double click on a molecule to enter it. Use the up arrow in the upper right hand corner of the screen to go up one level.",
     "topLevel": true,
     "allAtoms": [
@@ -111,7 +116,7 @@
                 },
                 {
                     "name": "height",
-                    "ioValue": 1
+                    "ioValue": 10
                 }
             ],
             "description": "Extrudes a 2D shape. Input can be negitive. "
@@ -296,7 +301,20 @@
                     "x": 0,
                     "y": 0,
                     "uniqueID": "f37399ff-4d05-444f-b20d-d56640260243",
-                    "ioValues": [],
+                    "ioValues": [
+                        {
+                            "name": "Shape",
+                            "ioValue": 10
+                        },
+                        {
+                            "name": "Number",
+                            "ioValue": 10
+                        },
+                        {
+                            "name": "Dist",
+                            "ioValue": 10
+                        }
+                    ],
                     "description": "Defines a Replicad code block.",
                     "codeVersion": 1,
                     "code": "//Inputs:[Shape, Number, Dist];\n\n\nlet shapesArray = [];\nfor (let i = 0; i < Number; i++) {\n    let rotatedShape = await Move(Shape, Dist * i, 0, 0);\n    shapesArray.push(rotatedShape);\n}\n\nlet assembledShape = await Assembly(shapesArray)\n\nreturn assembledShape;\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n    /**\n    To Use the Code Atom, enter your inputs to the input list a.e Inputs:[shape, height]\n    If your input is connected to another atom with a replicad geometry you can access its geometry by looking up its ID in your library. a.e library[Input1].geometry[0] \n    Use any replicad available methods to modify your geometry. Learn more about all of the available methods at \n    https://replicad.xyz/docs/introapp/UserGuide.html \n    Return a replicad object that includes geometry, color, tags and plane. \n\n\n    Example Code Atom:\n\n      Inputs:[shape, x];\n\n      let finalShape = library[shape].geometry[0].clone.translate[x,0,0]\n\n      return {geometry: finalShape, color: library[shape].color, plane: library[shape].plane, tags: library[shape].tags }\n\n      - See more examples at _______ \n\n\n    */\n"
@@ -352,8 +370,9 @@
             ],
             "allConnectors": [
                 {
-                    "ap1Name": "input",
+                    "ap1Name": "geometry",
                     "ap2Name": "number or geometry",
+                    "ap2Primary": false,
                     "ap1ID": "f37399ff-4d05-444f-b20d-d56640260243",
                     "ap2ID": "3d08ec89-5bfb-4dec-8f7b-50156f12a9af"
                 }
@@ -609,146 +628,210 @@
                     }
                 ]
             ]
+        },
+        {
+            "atomType": "Input",
+            "name": "height",
+            "x": 0.025384615384615384,
+            "y": 0.26174496644295303,
+            "uniqueID": "d241ffef-b479-4f75-9de7-a8e58a5b64e7",
+            "ioValues": [],
+            "description": "Adds an input to the parent molecule. If the parent molecule is the top level of the project then the input will be available when the project is shared or imported into another project. Name is editable",
+            "type": "number"
+        },
+        {
+            "atomType": "Code",
+            "name": "Code",
+            "x": 0.75,
+            "y": 0.8236017897091723,
+            "uniqueID": "8e99a708-4236-4fdc-9505-647afdd4a720",
+            "ioValues": [
+                {
+                    "name": "inputShape",
+                    "ioValue": 10
+                },
+                {
+                    "name": "dist",
+                    "ioValue": 10
+                },
+                {
+                    "name": "height",
+                    "ioValue": 10
+                }
+            ],
+            "description": "Defines a Replicad code block.",
+            "codeVersion": 1,
+            "code": " \n      //Inputs:[inputShape, dist, height]\n      //This defines the molecules inputs and creates variables with the same names which can be referenced in the code\n      \n      //Takes the address and gets the shape from the library\n      let importedShape = library[inputShape]\n      \n      //This makes a new copy of of the shape (to prevent garbage collection issues),\n      //and moves it in the X direction. Note that this will not work if the input is an assembly\n      let movedShape = importedShape.geometry[0].clone().translate([dist,0,0])\n      \n      //Console.log works for debugging to better see what is happening under the hood\n      console.log(\"Shape:\")\n      console.log(importedShape);\n      \n      //Shapes stored in the library have tags, a color, a plane, and a bill of materials like this. We don't modify them here\n      let shape1 = {\n        geometry: [movedShape],\n        tags: importedShape.tags,\n        color: importedShape.color,\n        plane: importedShape.plane,\n        bom: importedShape.bom\n      }\n      \n      //We could at this point return shape1 as a complete shape and it will be automatically written to the library for us\n      //return shape1\n      \n      //We can also create a new shape from scratch\n      let createdRectangle = replicad.drawRectangle(5,7)\n      //This is the plane we are going to put our new shape on\n      const newPlane = new replicad.Plane().pivot(0, 'Y');\n      //And we extrude the shape to make it 3D\n      let createdShape = createdRectangle.sketchOnPlane(newPlane).extrude(height)\n      \n      //For our new geometry we need to define the tags, color, plane, etc\n      let shape2 = {\n          geometry: [createdShape], \n          tags: [\"aTag\"],\n          color: '#A3CE5B',\n          plane: newPlane,\n          bom: []\n      }\n      \n      //Then we can return our created shape in just the same way\n      //return shape2\n      \n      //If we want to return both shapes at once, we can create an assembly with them\n      let anAssembly = {\n        geometry: [shape1, shape2], \n        tags: [\"aNewTag\"],\n        color: '#A3CF5B',\n        plane: newPlane,\n        bom: []\n      }\n      \n      //And we can return that in the same way\n      return anAssembly\n      \n      \n          /**\n          To Use the Code Atom, enter your inputs to the input list a.e Inputs:[shape, height]\n          If your input is connected to another atom with a replicad geometry you can access its geometry by looking up its ID in your library. a.e library[Input1].geometry[0] \n          Use any replicad available methods to modify your geometry. Learn more about all of the available methods at \n          https://replicad.xyz/docs/introapp/UserGuide.html \n          Return a replicad object that includes geometry, color, tags and plane. \n      \n      \n          Example Code Atom:\n      \n            Inputs:[shape, x];\n      \n            let finalShape = library[shape].geometry[0].clone.translate[x,0,0]\n      \n            return {geometry: finalShape, color: library[shape].color, plane: library[shape].plane, tags: library[shape].tags }\n      \n            - See more examples at _______ \n      \n      \n          */\n      "
         }
     ],
     "allConnectors": [
         {
             "ap1Name": "geometry",
             "ap2Name": "geometry",
+            "ap2Primary": true,
             "ap1ID": 1745009357567,
             "ap2ID": 1745009476683
         },
         {
             "ap1Name": "geometry",
             "ap2Name": "geometry",
+            "ap2Primary": true,
             "ap1ID": 1745009357567,
             "ap2ID": "006c5c7d-b872-4644-8bea-bc138ca47e24"
         },
         {
             "ap1Name": "geometry",
             "ap2Name": "geometry",
+            "ap2Primary": true,
             "ap1ID": 1745009476683,
             "ap2ID": 1746832160568
         },
         {
             "ap1Name": "geometry",
             "ap2Name": "Shape 8",
+            "ap2Primary": false,
             "ap1ID": 1745010219608,
             "ap2ID": 1745010206178
         },
         {
             "ap1Name": "geometry",
             "ap2Name": "Geometry",
+            "ap2Primary": false,
             "ap1ID": 1745011902475,
             "ap2ID": "00d4c62c-2dcd-489c-9178-832fe8bbdf90"
         },
         {
             "ap1Name": "geometry",
             "ap2Name": "number or geometry",
+            "ap2Primary": false,
             "ap1ID": 1747436084257,
             "ap2ID": 1745009196702
         },
         {
             "ap1Name": "geometry",
             "ap2Name": "geometry",
+            "ap2Primary": true,
             "ap1ID": 1747440642245,
             "ap2ID": 1747436084257
         },
         {
             "ap1Name": "geometry",
             "ap2Name": "geometry2",
+            "ap2Primary": false,
             "ap1ID": "354ef0a2-8683-4869-a5ab-dd82c596bd9e",
             "ap2ID": "1450c7e0-1a32-4ddb-ab39-2c76325e3f03"
         },
         {
             "ap1Name": "geometry",
             "ap2Name": "geometry",
+            "ap2Primary": true,
             "ap1ID": "4b3f4017-8621-4b0c-a59b-4bf96a4ef141",
             "ap2ID": "f4aa4daf-4be0-44e9-b2ef-c319cb3aea9f"
         },
         {
             "ap1Name": "geometry",
             "ap2Name": "geometry1",
+            "ap2Primary": false,
             "ap1ID": "f4aa4daf-4be0-44e9-b2ef-c319cb3aea9f",
             "ap2ID": "1450c7e0-1a32-4ddb-ab39-2c76325e3f03"
         },
         {
             "ap1Name": "geometry",
             "ap2Name": "geometry",
+            "ap2Primary": true,
             "ap1ID": "f4aa4daf-4be0-44e9-b2ef-c319cb3aea9f",
             "ap2ID": "4ef67955-63bd-45db-a2b8-717e033ad19b"
         },
         {
             "ap1Name": "geometry",
             "ap2Name": "geometry2",
+            "ap2Primary": false,
             "ap1ID": "1450c7e0-1a32-4ddb-ab39-2c76325e3f03",
             "ap2ID": "af8e91be-213d-4f3c-a329-7177e9f65503"
         },
         {
-            "ap1Name": "geometry or number",
+            "ap1Name": "Geometry",
             "ap2Name": "Shape 9",
+            "ap2Primary": false,
             "ap1ID": "00d4c62c-2dcd-489c-9178-832fe8bbdf90",
             "ap2ID": 1745010206178
         },
         {
-            "ap1Name": "geometry or number",
+            "ap1Name": "Geometry",
             "ap2Name": "geometry",
+            "ap2Primary": false,
             "ap1ID": "00d4c62c-2dcd-489c-9178-832fe8bbdf90",
             "ap2ID": "6afe7e38-7868-4c05-b777-62321a340dc3"
         },
         {
             "ap1Name": "geometry",
             "ap2Name": "geometry",
+            "ap2Primary": true,
             "ap1ID": "80027ec8-7f54-4700-9f01-0a316ab4d892",
             "ap2ID": "29321a7c-9bf0-47db-ba3a-fa08568ac3a0"
         },
         {
             "ap1Name": "geometry",
             "ap2Name": "geometry",
+            "ap2Primary": true,
             "ap1ID": "29321a7c-9bf0-47db-ba3a-fa08568ac3a0",
             "ap2ID": "26722282-bb3b-48f8-8673-8b188e2b426b"
         },
         {
             "ap1Name": "geometry",
             "ap2Name": "geometry",
+            "ap2Primary": true,
             "ap1ID": "29321a7c-9bf0-47db-ba3a-fa08568ac3a0",
             "ap2ID": 1745010219608
         },
         {
             "ap1Name": "geometry",
             "ap2Name": "geometry",
+            "ap2Primary": true,
             "ap1ID": "af8e91be-213d-4f3c-a329-7177e9f65503",
             "ap2ID": 1745011902475
         },
         {
             "ap1Name": "geometry",
             "ap2Name": "geometry1",
+            "ap2Primary": false,
             "ap1ID": "26722282-bb3b-48f8-8673-8b188e2b426b",
             "ap2ID": "af8e91be-213d-4f3c-a329-7177e9f65503"
         },
         {
             "ap1Name": "geometry",
             "ap2Name": "geometry",
+            "ap2Primary": true,
             "ap1ID": "26722282-bb3b-48f8-8673-8b188e2b426b",
             "ap2ID": 1747440642245
         },
         {
             "ap1Name": "geometry",
             "ap2Name": "geometry",
+            "ap2Primary": true,
             "ap1ID": "006c5c7d-b872-4644-8bea-bc138ca47e24",
             "ap2ID": "751bdd64-c30a-4df2-b253-7f0a0ce2a31c"
         },
         {
             "ap1Name": "geometry",
             "ap2Name": "Shape 3",
+            "ap2Primary": false,
             "ap1ID": "751bdd64-c30a-4df2-b253-7f0a0ce2a31c",
             "ap2ID": "515fe3a1-894e-4f05-8797-8e6527490978"
         },
         {
             "ap1Name": "geometry",
             "ap2Name": "Shape 1",
+            "ap2Primary": false,
             "ap1ID": "4ef67955-63bd-45db-a2b8-717e033ad19b",
             "ap2ID": "515fe3a1-894e-4f05-8797-8e6527490978"
+        },
+        {
+            "ap1Name": "number or geometry",
+            "ap2Name": "height",
+            "ap2Primary": false,
+            "ap1ID": "d241ffef-b479-4f75-9de7-a8e58a5b64e7",
+            "ap2ID": 1745011902475
         }
     ],
     "unitsKey": "Inches",
