@@ -20,7 +20,13 @@
             "x": 0.9828877005347593,
             "y": 0.4649122807017544,
             "uniqueID": 1745009196702,
-            "ioValues": [],
+            "ioValues": [
+                {
+                    "name": "number or geometry",
+                    "ioValue": 1747436084257,
+                    "currentEquation": null
+                }
+            ],
             "description": "Connect geometry here to make it available in the next level up. "
         },
         {
@@ -77,7 +83,7 @@
             "ioValues": [
                 {
                     "name": "Shape 8",
-                    "ioValue": null
+                    "ioValue": 1745010219608
                 },
                 {
                     "name": "Shape 9",
@@ -94,6 +100,11 @@
             "uniqueID": 1745010219608,
             "ioValues": [
                 {
+                    "name": "geometry",
+                    "ioValue": "29321a7c-9bf0-47db-ba3a-fa08568ac3a0",
+                    "currentEquation": null
+                },
+                {
                     "name": "height",
                     "ioValue": 1,
                     "currentEquation": "1"
@@ -108,6 +119,11 @@
             "y": 0.8392857142857143,
             "uniqueID": 1745011902475,
             "ioValues": [
+                {
+                    "name": "geometry",
+                    "ioValue": "af8e91be-213d-4f3c-a329-7177e9f65503",
+                    "currentEquation": null
+                },
                 {
                     "name": "height",
                     "ioValue": 10,
@@ -154,6 +170,11 @@
             "uniqueID": 1747436084257,
             "ioValues": [
                 {
+                    "name": "geometry",
+                    "ioValue": 1747440642245,
+                    "currentEquation": null
+                },
+                {
                     "name": "xDist",
                     "ioValue": 10,
                     "currentEquation": "10"
@@ -178,6 +199,11 @@
             "y": 0.1488095238095238,
             "uniqueID": 1747440642245,
             "ioValues": [
+                {
+                    "name": "geometry",
+                    "ioValue": "26722282-bb3b-48f8-8673-8b188e2b426b",
+                    "currentEquation": null
+                },
                 {
                     "name": "height",
                     "ioValue": 1,
@@ -282,6 +308,11 @@
                     "name": "Dist",
                     "ioValue": 15,
                     "currentEquation": "15"
+                },
+                {
+                    "name": "Geometry",
+                    "ioValue": 1745011902475,
+                    "currentEquation": null
                 }
             ],
             "description": "Molecules provide an organizational structure to contain atoms. Double click on a molecule to enter it. Use the up arrow in the upper right hand corner of the screen to go up one level.",
@@ -416,8 +447,8 @@
             "ioValues": [
                 {
                     "name": "number of sides",
-                    "ioValue": 3.6,
-                    "currentEquation": "3.6"
+                    "ioValue": 4,
+                    "currentEquation": "4"
                 },
                 {
                     "name": "diameter",
@@ -434,6 +465,11 @@
             "y": 0.5595238095238095,
             "uniqueID": "29321a7c-9bf0-47db-ba3a-fa08568ac3a0",
             "ioValues": [
+                {
+                    "name": "geometry",
+                    "ioValue": "80027ec8-7f54-4700-9f01-0a316ab4d892",
+                    "currentEquation": null
+                },
                 {
                     "name": "x-axis degrees",
                     "ioValue": 0,
@@ -460,6 +496,11 @@
             "uniqueID": "af8e91be-213d-4f3c-a329-7177e9f65503",
             "ioValues": [
                 {
+                    "name": "geometry1",
+                    "ioValue": "26722282-bb3b-48f8-8673-8b188e2b426b",
+                    "currentEquation": null
+                },
+                {
                     "name": "geometry2",
                     "ioValue": "1450c7e0-1a32-4ddb-ab39-2c76325e3f03",
                     "currentEquation": null
@@ -474,6 +515,11 @@
             "y": 0.4347826086956522,
             "uniqueID": "26722282-bb3b-48f8-8673-8b188e2b426b",
             "ioValues": [
+                {
+                    "name": "geometry",
+                    "ioValue": "29321a7c-9bf0-47db-ba3a-fa08568ac3a0",
+                    "currentEquation": null
+                },
                 {
                     "name": "xDist",
                     "ioValue": 6,
