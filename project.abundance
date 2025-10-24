@@ -29,7 +29,8 @@
       "ioValues": [
         {
           "name": "diameter",
-          "ioValue": 10
+          "ioValue": 5,
+          "currentEquation": "5"
         }
       ]
     },
@@ -50,8 +51,7 @@
         },
         {
           "name": "zDist",
-          "ioValue": 2,
-          "currentEquation": "2"
+          "ioValue": 2
         }
       ]
     },
@@ -65,6 +65,69 @@
       "type": "number"
     },
     {
+      "atomType": "Assembly",
+      "name": "Assembly",
+      "x": 0.45572916666666663,
+      "y": 0.5857142857142857,
+      "uniqueID": "c0db32c9-4b46-4ff4-8efd-7ad10453294f",
+      "ioValues": [
+        {
+          "name": "Shape 1",
+          "ioValue": {
+            "geometry": "move-circle-2.5-2-0-0",
+            "dimension": "2D",
+            "tags": [],
+            "plane": {
+              "origin": [
+                0,
+                0,
+                2
+              ],
+              "xDir": [
+                1,
+                0,
+                0
+              ],
+              "normal": [
+                0,
+                0,
+                1
+              ]
+            },
+            "color": "#aad7f2",
+            "bom": []
+          }
+        },
+        {
+          "name": "Shape 2",
+          "ioValue": {
+            "geometry": "circle-2.5",
+            "dimension": "2D",
+            "tags": [],
+            "plane": {
+              "origin": [
+                0,
+                0,
+                0
+              ],
+              "xDir": [
+                1,
+                0,
+                0
+              ],
+              "normal": [
+                0,
+                0,
+                1
+              ]
+            },
+            "color": "#aad7f2",
+            "bom": []
+          }
+        }
+      ]
+    },
+    {
       "atomType": "GitHubMolecule",
       "name": "Linear-Pattern",
       "x": 0.49869791666666674,
@@ -73,23 +136,19 @@
       "ioValues": [
         {
           "name": "Number",
-          "ioValue": 5,
-          "currentEquation": "5"
+          "ioValue": 5
         },
         {
           "name": "distX",
-          "ioValue": 1,
-          "currentEquation": "1"
+          "ioValue": 1
         },
         {
           "name": "distY",
-          "ioValue": 0,
-          "currentEquation": "0"
+          "ioValue": 0
         },
         {
           "name": "distZ",
-          "ioValue": 3,
-          "currentEquation": "3"
+          "ioValue": 3
         }
       ],
       "topLevel": false,
@@ -326,69 +385,6 @@
       "unitsKey": "MM",
       "fileTypeVersion": 1,
       "compiledBom": []
-    },
-    {
-      "atomType": "Assembly",
-      "name": "Assembly",
-      "x": 0.45572916666666663,
-      "y": 0.5857142857142857,
-      "uniqueID": "c0db32c9-4b46-4ff4-8efd-7ad10453294f",
-      "ioValues": [
-        {
-          "name": "Shape 1",
-          "ioValue": {
-            "geometry": "move-circle-5-2-0-0",
-            "dimension": "2D",
-            "tags": [],
-            "plane": {
-              "origin": [
-                0,
-                0,
-                2
-              ],
-              "xDir": [
-                1,
-                0,
-                0
-              ],
-              "normal": [
-                0,
-                0,
-                1
-              ]
-            },
-            "color": "#aad7f2",
-            "bom": []
-          }
-        },
-        {
-          "name": "Shape 2",
-          "ioValue": {
-            "geometry": "circle-5",
-            "dimension": "2D",
-            "tags": [],
-            "plane": {
-              "origin": [
-                0,
-                0,
-                0
-              ],
-              "xDir": [
-                1,
-                0,
-                0
-              ],
-              "normal": [
-                0,
-                0,
-                1
-              ]
-            },
-            "color": "#aad7f2",
-            "bom": []
-          }
-        }
-      ]
     }
   ],
   "allConnectors": [
