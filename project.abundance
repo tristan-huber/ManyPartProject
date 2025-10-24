@@ -385,6 +385,71 @@
       "unitsKey": "MM",
       "fileTypeVersion": 1,
       "compiledBom": []
+    },
+    {
+      "atomType": "Molecule",
+      "name": "Molecule",
+      "x": 0.35546875,
+      "y": 0.7628571428571428,
+      "uniqueID": "ef815610-f186-4cd9-a2bc-4ba53b7fe380",
+      "ioValues": [],
+      "topLevel": false,
+      "allAtoms": [
+        {
+          "atomType": "Output",
+          "name": "Output",
+          "x": 0.98,
+          "y": 0.5,
+          "uniqueID": "bb60705f-026d-4336-af1d-c1a24586e5d5",
+          "ioValues": []
+        },
+        {
+          "atomType": "Rectangle",
+          "name": "Rectangle",
+          "x": 0.3509114583333333,
+          "y": 0.6571428571428571,
+          "uniqueID": "28be7b93-c304-40e8-b2da-2f35503edbd4",
+          "ioValues": [
+            {
+              "name": "x length",
+              "ioValue": 10
+            },
+            {
+              "name": "y length",
+              "ioValue": 10
+            }
+          ]
+        },
+        {
+          "atomType": "Extrude",
+          "name": "Extrude",
+          "x": 0.45182291666666663,
+          "y": 0.35714285714285715,
+          "uniqueID": "f65f532f-adeb-4b54-8ad8-2b3ea645cb37",
+          "ioValues": [
+            {
+              "name": "height",
+              "ioValue": 10
+            }
+          ]
+        }
+      ],
+      "allConnectors": [
+        {
+          "ap1Name": "geometry",
+          "ap2Name": "number or geometry",
+          "ap1ID": "28be7b93-c304-40e8-b2da-2f35503edbd4",
+          "ap2ID": "bb60705f-026d-4336-af1d-c1a24586e5d5"
+        },
+        {
+          "ap1Name": "geometry",
+          "ap2Name": "geometry",
+          "ap1ID": "28be7b93-c304-40e8-b2da-2f35503edbd4",
+          "ap2ID": "f65f532f-adeb-4b54-8ad8-2b3ea645cb37"
+        }
+      ],
+      "fileTypeVersion": 1,
+      "compiledBom": []
     }
   ],
   "allConnectors": [
